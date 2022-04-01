@@ -1,0 +1,18 @@
+@import "../../../styles.scss";
+
+
+.menu-container{
+    height:50vh;
+    width: 100%;
+    background-image:url('../../../assets/images/background-mobile.jpg');
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    padding: 1rem 0;
+
+    @media (min-width: 769px){
+        height:100vh;
+        background-image:url('../../../assets/images/background-desktop.jpg');
+        background-size: cover;
+    }
+}

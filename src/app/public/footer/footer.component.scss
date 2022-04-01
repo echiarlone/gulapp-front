@@ -1,0 +1,38 @@
+@import "../../../styles.scss";
+
+.footer-container{
+    height: 10rem;
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    background-color: $grey-gulapp;
+
+
+    .footer-items-container{
+        height: 100%;
+        color: $white-soft;
+        padding: 1rem 0;
+        display:grid;
+        grid-template-columns: 1;
+        font-family: 'Roboto Condensed', sans-serif;
+
+        .footer-items-list{
+            list-style: none;
+
+            li {
+                margin: 2rem 0;
+            }
+        }
+
+        
+    }
+
+    .logo-container{
+        display:flex;
+        align-items: center;
+        font-family: 'Birthstone', cursive;
+        color: $pink-gulapp;
+        font-size: 70px;        
+    }
+}
+

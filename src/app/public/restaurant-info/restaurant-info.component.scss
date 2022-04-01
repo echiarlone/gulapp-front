@@ -1,0 +1,112 @@
+@import "../../../styles.scss";
+
+@mixin contact-link {
+    height:10%rem;
+    width:10%rem;
+    background-color:transparent;
+    margin: 0 .5rem;
+
+    img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+.info-container{
+    height: auto;
+    width: 90vw;
+    background-color: $white-soft;
+    border-radius: .5rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 6px #00000080;
+    border: 3px solid $grey-gulapp;
+    font-family: 'Roboto Condensed';
+
+    .presentation-container{
+        height: 100%;
+        width: 30vw;
+        color: $grey-gulapp;
+        margin:auto ;
+
+        @media (min-width: 769px) {
+            display:flex;
+            flex-direction: column;;
+            justify-content: flex-start;
+        }
+        .logo-title{
+            text-align: center;
+            padding: .5rem 0;
+            @media (min-width: 769px) {
+                font-size:200%;
+            }
+        }
+
+        .logo-container{
+            width:100%;
+            height:auto;
+            border-radius: .5rem;
+            border: 2px solid $grey-gulapp;
+    
+            img{
+                width:100%;
+                height:100%;
+                border-radius: inherit;
+            }
+        }
+
+    }
+    
+
+    .media-info-container{
+        display:flex;
+        flex-direction: column;
+        color: $grey-gulapp;
+                
+        div{
+            margin:5% 0;
+            max-width: 100%;
+        }
+
+        .address-container{
+            display:flex;
+            flex-direction: row;
+            height: auto;
+            .address-icon{
+                img{
+                    margin-right: .1rem;
+                    width:.8rem;
+                    height:.8rem;
+                }
+                
+            }
+        }
+
+        .schedules-button{
+            display:flex;
+            flex-direction: row;
+
+            .schedules-link{
+                text-decoration: dotted underline 1px;
+                .schedules-icon{
+                    img{
+                        width:.8rem;
+                        height:.8rem;
+                    }
+                }
+            }
+            
+        }
+        .links-container{
+            justify-content: space-between;
+            .contact-link{
+                @include contact-link;
+            }
+        }
+       
+
+    }
+}

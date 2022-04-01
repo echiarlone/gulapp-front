@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+
+.header-container{
+    height: 2rem;
+    background-color: $grey-gulapp;
+    display:flex;
+    justify-content: center;
+
+    .logo-container{
+        
+        font-family: 'Birthstone', cursive;
+        color: $pink-gulapp;
+        font-size: 25px;
+    }
+}

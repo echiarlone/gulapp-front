@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    line-height: 1.15;
+    box-sizing: border-box;
+    border: 0;
+}
+
+//COLORES
+$pink-gulapp: #eb1c6b;
+$grey-gulapp: #363636;
+$white-soft: #ececec;
+
+
+//FUENTES
+//Font usada para el logo "Birthstone"
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+//Roboto Condensed
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+
+
+body{
+    background-color: $grey-gulapp;
+}
+
