@@ -2,11 +2,11 @@
 
 
 .menu-container{
-    height:50vh;
+    height:auto;
     width: 100%;
     background-image:url('../../../assets/images/background-mobile.jpg');
-    background-size: cover;
-    display:flex;
+    background-size: contain;
+    display:block;
     justify-content: center;
     padding: 1rem 0;
 

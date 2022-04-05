@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './public/header/header.component';
 import { FooterComponent } from './public/footer/footer.component';
-import { FoodMenuComponent } from './public/food-menu/food-menu.component';
+import { NewOrderComponent } from './public/new-order/new-order.component';
 import { RestaurantInfoComponent } from './public/restaurant-info/restaurant-info.component';
+import { RestaurantMenuComponent } from './public/restaurant-menu/restaurant-menu.component';
+import { CategoryMenuComponent } from './public/category-menu/category-menu.component';
+import { ContinueFloatButtonComponent } from './public/continue-float-button/continue-float-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    FoodMenuComponent,
-    RestaurantInfoComponent
+    NewOrderComponent,
+    RestaurantInfoComponent,
+    RestaurantMenuComponent,
+    CategoryMenuComponent,
+    ContinueFloatButtonComponent
   ],
   imports: [
     BrowserModule,

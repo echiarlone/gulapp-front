@@ -1,7 +1,7 @@
 @import "../../../styles.scss";
 
 .header-container{
-    height: 2rem;
+    height: 4rem;
     background-color: $grey-gulapp;
     display:flex;
     justify-content: center;
@@ -9,7 +9,7 @@
     .logo-container{
         
         font-family: 'Birthstone', cursive;
-        color: $pink-gulapp;
-        font-size: 25px;
+        color: $orange-gulapp;
+        font-size: 50px;
     }
 }

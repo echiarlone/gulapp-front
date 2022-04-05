@@ -1,0 +1,27 @@
+<div class="category-container">
+
+    <div class="category-title-container">
+        <h3 class="category-title">{{category.name}}</h3>
+    </div>
+
+    <div class="meal-list">
+
+        <div class="meal-container" *ngFor="let meal of category.meals">
+
+            <p class="meal-item-name" >
+                {{meal}}
+            </p>
+            <p class="meal-item-price" >
+                $250
+            </p>
+    
+    
+            <a class="add-item-button">
+                Agregar +
+            </a>
+    
+        </div>
+     
+    </div>
+
+</div>

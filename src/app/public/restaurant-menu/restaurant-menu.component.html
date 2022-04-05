@@ -1,0 +1,27 @@
+<div class="menu-container">
+
+    <div class="menu-title-container">
+        <h3 class="menu-title">MENÚ</h3>
+    </div>
+
+    <div class="categories-container">
+
+        <div class="categories-title-container">
+            <h3 class="categories-title">CATEGORÍAS</h3>
+        </div>
+
+        <div class="categories-list">
+            <a class="category-item" *ngFor="let category of categories">
+                {{category.name}}
+            </a>
+        </div>
+
+    </div>
+
+    <app-category-menu 
+        *ngFor="let category of categories"
+        [category]="category">
+    </app-category-menu>
+
+
+</div>
