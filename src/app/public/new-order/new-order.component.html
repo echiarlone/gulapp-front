@@ -2,6 +2,9 @@
 
     <app-restaurant-info> </app-restaurant-info>
 
-    <app-restaurant-menu></app-restaurant-menu>
+    <app-restaurant-menu 
     
+    [order]="order"></app-restaurant-menu>
+    
+    <app-continue-float-button *ngIf="!orderIsEmpty"></app-continue-float-button>
 </div>

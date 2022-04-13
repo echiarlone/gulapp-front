@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Category } from 'src/app/core/models/category';
+import { Order } from 'src/app/core/models/order';
 
 @Component({
   selector: 'app-restaurant-menu',
@@ -8,7 +9,9 @@ import { Category } from 'src/app/core/models/category';
 })
 export class RestaurantMenuComponent implements OnInit {
 
-  public categories: Category[] = [
+  @Input() order: Order;
+
+  public categories: any[] = [
     {
       id: 1,
       name:"Pizzas", 

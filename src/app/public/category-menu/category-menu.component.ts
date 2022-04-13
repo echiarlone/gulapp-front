@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Category } from 'src/app/core/models/category';
+import { OrderService } from 'src/app/core/services/order.service';
 
 @Component({
   selector: 'app-category-menu',
@@ -8,11 +9,17 @@ import { Category } from 'src/app/core/models/category';
 })
 export class CategoryMenuComponent implements OnInit {
 
-  @Input() category:Category;
+  @Input() category:any;
   
-  constructor() { }
+  constructor(
+    private orderService:OrderService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public addToOrder(meal){
+    this.orderService.pushProductQuantity(meal);
   }
 
 }
