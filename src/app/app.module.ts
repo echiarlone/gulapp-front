@@ -12,6 +12,7 @@ import { CategoryMenuComponent } from './public/category-menu/category-menu.comp
 import { ContinueFloatButtonComponent } from './public/continue-float-button/continue-float-button.component';
 import { ProductPreviewComponent } from './public/product-preview/product-preview.component';
 import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { MaterialModule } from './material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
