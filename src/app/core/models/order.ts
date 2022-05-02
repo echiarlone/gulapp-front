@@ -7,16 +7,32 @@ export class Order{
     public productQuantities: ProductQuantity[];
     public price: number;
 
-    public changeOrder(productQuantity:ProductQuantity){
+    constructor(productQuantities: ProductQuantity[]){
+        this.id = Math.random();
+        this.productQuantities = productQuantities;
+    }
 
-        let meal = this.productQuantities.find(meal => meal.product.id == productQuantity.product.id);
+    public changeOrder(productId:number, quantity:number){
+
+        let meal = this.productQuantities.find(meal => meal.product.id == productId);
 
         if(meal){
-            meal.quantity == 0 ? meal.quantity = 0 : meal.quantity += productQuantity.quantity;
+            meal.quantity = quantity;
         }else{
-            this.productQuantities.push(productQuantity);
+            this.productQuantities.push(meal);
         }
     }
     
-}
+    public deleteProduct(id:number){
+        this.productQuantities = this.productQuantities.filter(meal => meal.product.id != id);
+    }
+    
+    public addProduct(productQuantity:ProductQuantity){
+        this.productQuantities.push(productQuantity);
+    }
+
+    public countProducts():number {
+        return this.productQuantities.length;
+    }
+}   
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/core/models/order';
+import { OrderService } from 'src/app/core/services/order.service';
 
 @Component({
   selector: 'app-new-order',
@@ -8,12 +9,18 @@ import { Order } from 'src/app/core/models/order';
 })
 export class NewOrderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private orderService: OrderService
+  ) { }
 
   public orderIsEmpty: boolean = true;
   public order: Order;
 
   ngOnInit(): void {
+    this.orderService.getOrderChanges().subscribe(order => {
+      this.order = order;
+      this.orderIsEmpty = this.order.countProducts() == 0;
+    });
   }
 
   public productQuantity(): void { 

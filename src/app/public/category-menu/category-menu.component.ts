@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Category } from 'src/app/core/models/category';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { OrderService } from 'src/app/core/services/order.service';
+import { ProductPreviewComponent } from '../product-preview/product-preview.component';
 
 @Component({
   selector: 'app-category-menu',
@@ -12,14 +13,15 @@ export class CategoryMenuComponent implements OnInit {
   @Input() category:any;
   
   constructor(
-    private orderService:OrderService
+    private orderService:OrderService,
+    private dialog:MatDialog
   ) { }
 
   ngOnInit(): void {
   }
 
-  public addToOrder(meal){
-    this.orderService.pushProductQuantity(meal);
+  public openInfoDialog(): void {
+    let dialogRef = this.dialog.open(ProductPreviewComponent);
   }
 
 }

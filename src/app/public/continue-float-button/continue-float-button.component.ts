@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from 'src/app/core/models/order';
+import { OrderService } from 'src/app/core/services/order.service';
 
 @Component({
   selector: 'app-continue-float-button',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContinueFloatButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private orderService: OrderService
+  ) { }
+  
+  public hidden:boolean;
+  public order:Order;
 
   ngOnInit(): void {
+
+    this.order = this.orderService.getOrder();
+    this.hidden = this.order.countProducts() == 0;
+
+    this.orderService.getOrderChanges().subscribe(order => {
+      this.order = order;
+      this.hidden = this.order.countProducts() == 0;
+    })
+    
   }
 
 }

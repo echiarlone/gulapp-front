@@ -10,7 +10,8 @@ import { RestaurantInfoComponent } from './public/restaurant-info/restaurant-inf
 import { RestaurantMenuComponent } from './public/restaurant-menu/restaurant-menu.component';
 import { CategoryMenuComponent } from './public/category-menu/category-menu.component';
 import { ContinueFloatButtonComponent } from './public/continue-float-button/continue-float-button.component';
-
+import { ProductPreviewComponent } from './public/product-preview/product-preview.component';
+import { MaterialModule } from './material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +21,13 @@ import { ContinueFloatButtonComponent } from './public/continue-float-button/con
     RestaurantInfoComponent,
     RestaurantMenuComponent,
     CategoryMenuComponent,
-    ContinueFloatButtonComponent
+    ContinueFloatButtonComponent,
+    ProductPreviewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

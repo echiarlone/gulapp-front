@@ -24,7 +24,7 @@
     }
 
     .categories-container{
-
+        
         .categories-title-container{
             .categories-title{
                 font-size: 140%;
@@ -42,6 +42,8 @@
             max-width: 100%;
             height: auto;
             flex-wrap: wrap;
+            justify-content:center;
+            
             .category-item{
                 color:$white-soft;
                 padding: .2rem;

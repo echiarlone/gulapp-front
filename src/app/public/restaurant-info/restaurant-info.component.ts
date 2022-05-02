@@ -11,7 +11,7 @@ export class RestaurantInfoComponent implements OnInit {
 
   @Input('restaurant') restaurant:any;
 
-  public name:string = "Pizzería Hut";
+  public name:string = "Sabor a Pampa";
   public address:string = "Pellegrini 230";
   public isClosed:string;
   public schedules:string;
