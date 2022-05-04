@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Category } from 'src/app/core/models/category';
 import { Order } from 'src/app/core/models/order';
+import { HardcodedServiceService } from 'src/app/core/services/hardcoded-service.service';
 
 @Component({
   selector: 'app-restaurant-menu',
@@ -11,35 +12,13 @@ export class RestaurantMenuComponent implements OnInit {
 
   @Input() order: Order;
 
-  public categories: any[] = [
-    {
-      id: 1,
-      name:"Pizzas", 
-      meals: ["Pizza Margherita", "Pizza Napoletana", "Pizza Quattro Stagioni"]
-    },
-    { 
-      id: 2,
-      name:"Hamburguesas",
-      meals: ["Hamburguesa de Pollo", "Hamburguesa de Res", "Hamburguesa de Cerdo"]},
-    {
-      id: 3,
-      name:"Bebidas",
-      meals: ["Coca Cola", "Fanta", "Sprite", "Agua"]
-    },
-    { 
-      id: 4,
-      name:"Postres",
-      meals: ["Tiramisu", "Helado", "Pastel", "Brownie"]
-    },
-    { 
-      id: 5,
-      name: "Pastas",
-      meals: ["Ñoquis", "Ravioles", "Sorrentinos"]
-    }
-  ];
-  constructor() { }
+  public categories: Category[];
+  constructor(
+    private hardcoded: HardcodedServiceService
+  ) { }
 
   ngOnInit(): void {
+    this.categories = this.hardcoded.categories;
   }
 
 }

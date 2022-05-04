@@ -6,17 +6,17 @@
 
     <div class="meal-list">
 
-        <div class="meal-container" *ngFor="let meal of category.meals">
+        <div class="meal-container" *ngFor="let product of products">
 
             <p class="meal-item-name" >
-                {{meal}}
+                {{product.name}}
             </p>
             <p class="meal-item-price" >
-                $250
+                {{product.price}}
             </p>
     
     
-            <a class="add-item-button" (click)="openInfoDialog(meal)">
+            <a class="add-item-button" (click)="openInfoDialog(product)">
                 Agregar +
             </a>
     

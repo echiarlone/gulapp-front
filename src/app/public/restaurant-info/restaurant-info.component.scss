@@ -18,7 +18,7 @@
     width: 90vw;
     background-color: $white-soft;
     border-radius: .5rem;
-    padding: .5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,7 +32,7 @@
         height: 100%;
         width: 30vw;
         color: $grey-gulapp;
-        margin:auto;
+        margin-left:0;
 
         @media (min-width: 769px) {
             display:flex;
@@ -65,16 +65,20 @@
     
 
     .media-info-container{
-        height: calc(100%/3);
         display:flex;
         flex-direction: column;
         color: $grey-gulapp;
+        height: inherit;
         font-size: 20px;
         justify-content:space-between;
         padding: 0 0 0 1rem;
+        border-radius: .5rem;
+        border:2px dashed $orange-gulapp;
+        margin-left: .5rem;
+
         div{
             width: 100%;
-            margin-top: 5%;
+            margin-top: 10%;
         }
 
         .address-container{
@@ -108,6 +112,7 @@
         }
         .links-container{
             justify-content: space-between;
+            
             .contact-link{
                 @include contact-link;
             }

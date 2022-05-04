@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+.container{
+    max-height: 90vh;
+    max-width: 90vw;
+    background-color: $white-soft;
+    border-radius: .5rem;
+    border: 3px solid $grey-gulapp;
+    padding:.5rem;
+    .title-container{
+        .title{
+
+        };
+    }
+
+    .description-container{
+        .description{
+
+        };
+    }
+
+    .image-container{
+        .image{
+        };
+    }
+}
+
+::ng-deep{
+    .mat-dialog-container{
+        border-radius: .5rem;
+        padding:0;
+    }
+}
